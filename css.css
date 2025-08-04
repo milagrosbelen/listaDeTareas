@@ -46,19 +46,19 @@ h1{
 }
 #contenido #miercoles{
     grid-area: miercoles;
-    background-color: #adadad;
+    background-color: #d4d4d4;
 }
 #contenido #jueves{
     grid-area: jueves;
-    background-color: #bababa;
+    background-color: #a2a2a2;
 }
 #contenido #viernes{
     grid-area: viernes;
-    background-color: #ffffff;
+    background-color: #dedede;
 }
 #contenido #sabado{
     
-    background-color: #fffefe;
+    background-color: #aeaeae;
 }
 #contenido #domingo{
     
@@ -109,6 +109,16 @@ input{
     font-size: 1em;
     border: none;
     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.btn-recargar{
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
 }
 
 
