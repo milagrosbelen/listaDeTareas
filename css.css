@@ -1,140 +1,143 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: rgb(85, 85, 85);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+body {
+  background: linear-gradient(to right, #c3cfe2, #f5f7fa);
+  min-height: 100vh;
+  padding: 2em;
 }
 
-.titulo{
-    margin: 2em;
-    padding: 2em;
-    border-radius: 1em;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: rgb(255, 255, 255);
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
 }
-#diseñoContenedor{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+
+.titulo {
+  background-color: white;
+  padding: 1em 2em;
+  border-radius: 1em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2em;
 }
+
+#diseñoContenedor {
+  display: flex;
+  justify-content: center;
+}
+
 #contenido {
-   display: grid;
-    gap: 2em;
-    grid-template-areas: 
-        "lunes martes miercoles"
-        "jueves viernes sabado"
-        "domingo domingo domingo";
-
-}
-#contenido #lunes{
-    grid-area: lunes;
-    background-color: #f7f7f7;
-}
-#contenido #martes{
-    grid-area: martes;
-    background-color: #d4d4d4;
-}
-#contenido #miercoles{
-    grid-area: miercoles;
-    background-color: #d4d4d4;
-}
-#contenido #jueves{
-    grid-area: jueves;
-    background-color: #a2a2a2;
-}
-#contenido #viernes{
-    grid-area: viernes;
-    background-color: #dedede;
-}
-#contenido #sabado{
-    
-    background-color: #aeaeae;
-}
-#contenido #domingo{
-    
-    background-color: #e0e0e0;
+  display: grid;
+  gap: 2em;
+  grid-template-areas: 
+    "lunes martes miercoles"
+    "jueves viernes sabado"
+    "domingo domingo domingo";
 }
 
-.tarjetas{
-    
-    background-color: white;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    min-height: 200px;
-}
-.diseño{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border-radius: 1em;
-    border-color: white;
-    margin: 2em;
-    gap: 2EM;
-    flex-direction: column;
-}
-button{
-    border-radius: 0.5em;
-    background-color: rgb(219, 219, 219);
-    border-color: white;
-    cursor: pointer;
-}
-h2{
-display: flex;
-justify-content: center;
-align-content: center;
-text-transform: uppercase;
-font-size: 1.5em;
-font-weight: bold;
+#contenido section {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 1em;
+  padding: 1.5em;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-input{
-    display: block;
-    margin-top: 1em;
-    border-radius: 1em;
-    background-color: white;
-    height: 2.5em; /* O el tamaño que te guste */
-    width: 90%;    /* Para que no sea tan largo */
-    padding: 0.5em 1em; /* Para que el texto no quede pegado al borde */
-    font-size: 1em;
-    border: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-}
-.btn-recargar{
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 5px;
-    margin-top: 10px;
-    display: block;
-    text-align: center;
+#contenido #lunes   { grid-area: lunes; }
+#contenido #martes  { grid-area: martes; }
+#contenido #miercoles { grid-area: miercoles; }
+#contenido #jueves  { grid-area: jueves; }
+#contenido #viernes { grid-area: viernes; }
+#contenido #sabado  { grid-area: sabado; }
+#contenido #domingo { grid-area: domingo; }
+
+.tarjetas {
+  min-height: 220px;
 }
 
+.diseño {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+h2 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.8em 1em;
+  border: none;
+  border-radius: 0.8em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+button {
+  padding: 0.5em 1.2em;
+  background-color: #4f8ef7;
+  color: white;
+  border: none;
+  border-radius: 0.6em;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background-color: #3b74d8;
+}
+
+.btn {
+  background-color: #4caf50;
+}
+
+.btn:hover {
+  background-color: #3c9741;
+}
+
+.btn-recargar {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0.3em;
+  transition: transform 0.2s ease;
+}
+
+.btn-recargar:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+.divInput span {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-weight: bold;
+}
 
 @media (max-width: 900px) {
-    #contenido {
+  #contenido {
     grid-template-areas: 
       "lunes martes"
       "miercoles jueves"
       "viernes sabado"
       "domingo domingo";
     grid-template-columns: repeat(2, 1fr);
-    }
+  }
 }
 
 @media (max-width: 600px) {
-    #contenido {
+  #contenido {
     grid-template-areas: 
       "lunes"
       "martes"
@@ -144,5 +147,5 @@ input{
       "sabado"
       "domingo";
     grid-template-columns: 1fr;
-    }
+  }
 }
